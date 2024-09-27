@@ -13,7 +13,7 @@ export default function GuestLayout() {
             case "student":
                 return <Navigate to="/student" />;
             case "teacher":
-                return <Navigate to="/teacher" />;
+                return <Navigate to="/teacher/student" />;
             default:
                 return <Navigate to="*" />;
         }

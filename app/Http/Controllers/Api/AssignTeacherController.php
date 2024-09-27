@@ -92,4 +92,17 @@ class AssignTeacherController extends Controller
     //         return null;
     //     }
     // }
+
+    public function currentClass($teacherId)
+    {
+
+        $currentClasses = TeacherClasses::join('classms', 'teacher_classes.class_id', '=', 'classms.id')
+            ->where('teacher_classes.teacher_id', $teacherId)
+            ->select(
+                'classms.name as class_name',
+                'teacher_classes.class_id as class_id'
+            )->get();
+
+        return response()->json(['data' => $currentClasses]);
+    }
 }

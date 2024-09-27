@@ -45,7 +45,7 @@ export default function MyAccountForm() {
             .then(() => {
                 setNotification("User Was Updated Successfully");
 
-                navigate("/admin/my-account");
+                navigate(-1);
             })
             .catch((error) => {
                 const response = error.response;

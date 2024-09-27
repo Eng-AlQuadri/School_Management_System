@@ -54,8 +54,6 @@ export default function Admins() {
             });
     };
 
-    const onSend = () => {};
-
     return (
         <div className="doctors">
             <div className="doc-head">
@@ -111,12 +109,6 @@ export default function Admins() {
                                                 onClick={() => onDelete(a)}
                                             >
                                                 Delete
-                                            </button>
-                                            <button
-                                                className="message"
-                                                onClick={() => onSend(a)}
-                                            >
-                                                Send Message
                                             </button>
                                         </td>
                                     </tr>

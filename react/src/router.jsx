@@ -49,6 +49,12 @@ import MyAccountForm from "./view/MyAccountForm";
 import TeacherStudents from "./view/TeacherStudents";
 import TeacherExams from "./view/TeacherExams";
 import TeacherExamOptions from "./view/TeacherExamOptions";
+import TeacherAttendanceOptions from "./view/TeacherAttendanceOptions";
+import TeacherAttendance from "./view/TeacherAttendance";
+import TeacherTakeAttendance from "./view/TeacherTakeAttendance";
+import TeacherHomework from "./view/TeacherHomework";
+import TeacherHomeworkOptions from "./view/TeacherHomeworkOptions";
+import TeacherAddHomework from "./view/TeacherAddHomework";
 
 const router = createBrowserRouter([
     {
@@ -96,6 +102,46 @@ const router = createBrowserRouter([
                         element: <TeacherExams />,
                     },
                 ],
+            },
+            {
+                path: "attendance",
+                element: <TeacherAttendanceOptions />,
+                children: [
+                    {
+                        path: "options",
+                        element: <TeacherAttendance />,
+                    },
+                    {
+                        path: "take-attendance",
+                        element: <TeacherTakeAttendance />,
+                    },
+                ],
+            },
+            {
+                path: "homework",
+                element: <TeacherHomework />,
+                children: [
+                    {
+                        path: "options",
+                        element: <TeacherHomeworkOptions />,
+                    },
+                    {
+                        path: "add-homework",
+                        element: <TeacherAddHomework />,
+                    },
+                ],
+            },
+            {
+                path: "my-account",
+                element: <MyAccount />,
+            },
+            {
+                path: "my-account/edit/:id",
+                element: <MyAccountForm />,
+            },
+            {
+                path: "chats",
+                element: <Chat />,
             },
         ],
     },

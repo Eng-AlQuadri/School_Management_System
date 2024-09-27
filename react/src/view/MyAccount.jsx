@@ -27,7 +27,7 @@ export default function MyAccount() {
     };
 
     const onEdit = (id) => {
-        navigate(`/admin/my-account/edit/${id}`);
+        navigate(`edit/${id}`);
     };
 
     return (

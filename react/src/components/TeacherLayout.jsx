@@ -1,7 +1,6 @@
 import { useStateContext } from "../contexts/ContextProvider";
 import { Link, Navigate, Outlet, useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import DashboardIcon from "@mui/icons-material/Dashboard";
 import NotListedLocationIcon from "@mui/icons-material/NotListedLocation";
 import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
@@ -45,7 +44,7 @@ export default function TeacherLayout() {
 
         // For Messages
         if (index == 1) {
-            navigate("/admin/chats");
+            navigate("/teacher/chats");
         }
         setSelectedIndex(index);
         localStorage.setItem("SCHOOL_LIST", index);
@@ -100,17 +99,6 @@ export default function TeacherLayout() {
                             <SchoolIcon />
                         </span>
                         <span className="title">School System</span>
-                    </li>
-                    <li
-                        onClick={() => navClick(2)}
-                        className={selectedIndex == 2 ? "selected" : ""}
-                    >
-                        <Link to="dashboard">
-                            <span className="icon">
-                                <DashboardIcon />
-                            </span>
-                            <span className="title">Dashboard</span>
-                        </Link>
                     </li>
                     <li
                         onClick={() => navClick(5)}

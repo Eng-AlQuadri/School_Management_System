@@ -43,6 +43,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/exams/teacher/{id}', [ExamController::class, 'getExamsByTeacher']);
 
+    Route::get('/teacherClass/{id}', [AssignTeacherController::class, 'currentClass']);
+
     Route::apiResource('/admins', AdminController::class);
 
     Route::apiResource('/teachers', TeacherController::class);

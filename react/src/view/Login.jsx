@@ -67,7 +67,7 @@ export default function Login() {
                         id="submit-btn"
                         name="signup"
                     />
-                    <div className="question">
+                    {/* <div className="question">
                         <p>
                             For Testing
                             <br />
@@ -77,7 +77,7 @@ export default function Login() {
                             <br />
                             Password: user@user
                         </p>
-                    </div>
+                    </div> */}
                 </form>
             </div>
         </div>
